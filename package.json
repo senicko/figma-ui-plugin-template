@@ -1,0 +1,26 @@
+{
+  "name": "plugin-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:plugin": "esbuild plugin/code.ts --bundle --minify --outfile=build/code.js",
+    "build:ui": "esbuild ui/main.tsx --bundle --jsx=automatic --minify --outfile=build/ui.js",
+    "build": "npm run build:plugin && npm run build:ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.50.0",
+    "@types/node": "^18.7.6",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "esbuild": "^0.15.5",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

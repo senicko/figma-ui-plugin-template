@@ -1,0 +1,8 @@
+{
+  "name": "Plugin",
+  "id": "1142112849918991568",
+  "api": "1.0.0",
+  "editorType": ["figma"],
+  "main": "./build/code.js",
+  "ui": "./ui.html"
+}
