@@ -4,5 +4,5 @@
   "api": "1.0.0",
   "editorType": ["figma"],
   "main": "./build/code.js",
-  "ui": "./ui.html"
+  "ui": "./build/ui.html"
 }
