@@ -10,7 +10,17 @@ Clone this repo and run
 npm i
 ```
 
-Write your plugin code inside `src/plugin`. Build your plugin interface with react in `src/ui`.
+To just build your plugin run
+
+```
+npm run build
+```
+
+To start development mode (rebuild on change) run
+
+```
+npm run dev
+```
 
 Do not delete `src/plugin/run.ts`, `src/ui/main.tsx` and `src/ui/ui.html` files because they are needed during build step!
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "watch": "node ./scripts/watch.js"
+    "dev": "node ./scripts/dev.js"
   },
   "keywords": [],
   "author": "",
