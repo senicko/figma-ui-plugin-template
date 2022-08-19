@@ -3,25 +3,26 @@ const fs = require("fs/promises");
 const { name } = require("../manifest.json");
 const { minify } = require("html-minifier");
 
-const build = async () => {
-  await fs.rm("./build", { recursive: true, force: true });
-
+const buildPlugin = async () => {
   await esbuild.build({
-    entryPoints: ["./plugin/plugin.ts"],
+    entryPoints: ["./src/plugin/run.ts"],
     bundle: true,
     minify: true,
     outfile: "./build/plugin.js",
   });
+};
 
+const buildUi = async () => {
   const result = await esbuild.build({
-    entryPoints: ["./ui/main.tsx"],
+    entryPoints: ["./src/ui/main.tsx"],
+    jsx: "automatic",
     bundle: true,
     minify: true,
     write: false,
     outdir: "./build",
   });
 
-  let html = (await fs.readFile("./ui/template.html")).toString();
+  let html = (await fs.readFile("./src/ui/ui.html")).toString();
 
   html = html.replaceAll("__name__", name);
 
@@ -45,6 +46,11 @@ const build = async () => {
       collapseWhitespace: true,
     })
   );
+};
+
+const build = async () => {
+  await fs.rm("./build", { recursive: true, force: true });
+  await Promise.all([buildPlugin(), buildUi()]);
 };
 
 build().catch((err) => {

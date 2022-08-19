@@ -1,0 +1,1 @@
+"use strict";(()=>{figma.showUI(__html__,{themeColors:!0});figma.ui.onmessage=i=>{if(i.type==="create-rectangles"){let e=[];for(let o=0;o<i.count;o++){let t=figma.createRectangle();t.x=o*150,t.fills=[{type:"SOLID",color:{r:1,g:.5,b:0}}],e.push(t)}figma.currentPage.selection=e,figma.viewport.scrollAndZoomIntoView(e)}figma.closePlugin()};})();

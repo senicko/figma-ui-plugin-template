@@ -4,13 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:plugin": "esbuild plugin/code.ts --bundle --minify --outfile=build/code.js",
-    "build:ui": "esbuild ui/main.tsx --bundle --jsx=automatic --minify --outfile=build/ui.js",
-    "build": "npm run build:plugin && npm run build:ui"
+    "build": "node ./scripts/build.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@figma/plugin-typings": "^1.50.0",
     "@types/node": "^18.7.6",
