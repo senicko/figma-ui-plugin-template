@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(1.3 * 11px);
+  color: var(--figma-color-text);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  border: none;
+  font-size: 11px;
+  padding: 8px;
+  line-height: calc(1.3 * 11px);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: var(--figma-color-bg);
+  color: var(--figma-color-text);
+}
+
+.input:hover {
+  border: 1px solid var(--figma-color-border);
+}
+
+.input:focus {
+  border: 1px solid var(--figma-color-border-selected);
+  outline: 1px solid var(--figma-color-border-selected);
+}
+
+.button {
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--figma-color-bg-brand);
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: none;
+  color: var(--figma-color-text-onbrand);
+  font-size: 11px;
+  line-height: calc(1.3 * 11px);
+}
