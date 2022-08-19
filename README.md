@@ -1,6 +1,18 @@
-# Figma Design with UI & Browser APIs plugin template
+# Figma Design plugin template with UI & Browser APIs
 
 This is a template for writing Figma Design plugins with UI & browser APIs. It uses typescript, react for ui and esbuild for bundling.
+
+## Getting started
+
+Clone this repo and run
+
+```
+npm i
+```
+
+Write your plugin code inside `src/plugin`. Build your plugin interface with react in `src/ui`.
+
+Do not delete `src/plugin/run.ts`, `src/ui/main.tsx` and `src/ui/ui.html` files because they are needed during build step!
 
 ## Useful resources
 
