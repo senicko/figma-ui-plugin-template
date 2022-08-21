@@ -4,6 +4,14 @@ This is a template for writing Figma Design plugins with UI & browser APIs. It u
 
 ## Getting started
 
+### Manifest.json
+
+First you need to update the `manifest.json`. You need to enter your plugin `id`. Idk if there is a simpler way than generating the basic plugin template by figma by going to `plugin > development > new plugin` and then creating `figma design plugin > with ui & browser APIs`. Then you have to save the folder figma generated somewhere and take everything from `manifest.json` inside it, excluding `main` and `ui` options, and put it inside of this repo's `manifest.json`.
+
+Now you can remove the plugin created by figma (the folder you saved in the step above), and add a new plugin providing `manifest.json` from THIS repo. To remove invalid plugins go to `plugin > development > manage plugins in development`. To add go to `plugin > development > import plugin from manifest`.
+
+### Running
+
 Clone this repo and run
 
 ```
