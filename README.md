@@ -12,7 +12,7 @@ Now you can remove the plugin created by figma (the folder you saved in the step
 
 ### Running
 
-Clone this repo and run
+Install dependencies
 
 ```
 npm i
